@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8dce6">
+  <title>Yuushi's Virtual Phone</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="phone-shell">
+    <header class="status-bar">
+      <span id="status-time">9:41</span>
+      <span class="status-right"><span>●●●</span><span>Wi-Fi</span><span class="battery">▰</span></span>
+    </header>
+
+    <main id="home-screen" class="screen home-screen">
+      <section class="welcome">
+        <p class="eyebrow">TOKUNO YUUSHI'S DEVICE</p>
+        <h1>Hi, there <span>♡</span></h1>
+        <p class="subtitle">a little world just for us.</p>
+        <div class="date-card">
+          <div>
+            <span id="weekday">TUESDAY</span>
+            <strong id="date-number">27</strong>
+          </div>
+          <p id="date-month">OCTOBER<br><small>make today lovely</small></p>
+          <span class="date-sparkle">✦</span>
+        </div>
+      </section>
+
+      <section class="app-grid" aria-label="Applications">
+        <button class="app-button" data-app="kakao"><span class="app-icon kakao">T</span><span>KakaoTalk</span></button>
+        <button class="app-button" data-app="photos"><span class="app-icon photos"><span>✿</span></span><span>Photos</span></button>
+        <button class="app-button" data-app="notes"><span class="app-icon notes">▤</span><span>Notes</span></button>
+        <button class="app-button" data-app="instagram"><span class="app-icon instagram">◎</span><span>Instagram</span></button>
+        <button class="app-button" data-app="calendar"><span class="app-icon calendar"><b>27</b></span><span>Calendar</span></button>
+        <button class="app-button" data-app="settings"><span class="app-icon settings">⚙</span><span>Settings</span></button>
+        <button class="app-button" data-app="music"><span class="app-icon music">♫</span><span>Music</span></button>
+        <button class="app-button" data-app="safari"><span class="app-icon safari">◉</span><span>Safari</span></button>
+        <button class="app-button" data-app="phone"><span class="app-icon phone">☎</span><span>Phone</span></button>
+      </section>
+
+      <div class="home-note">✧ tap an app to open your little universe ✧</div>
+      <nav class="dock" aria-label="Quick apps">
+        <button data-app="phone" aria-label="Phone">☎</button>
+        <button data-app="kakao" aria-label="KakaoTalk">T</button>
+        <button data-app="photos" aria-label="Photos">✿</button>
+        <button data-app="music" aria-label="Music">♫</button>
+      </nav>
+    </main>
+
+    <main id="app-screen" class="screen app-screen hidden">
+      <div class="app-topbar">
+        <button id="back-button" class="back-button" aria-label="Back to home">‹ <span>Home</span></button>
+        <span id="app-title">App</span>
+        <button id="close-button" class="close-button" aria-label="Close app">×</button>
+      </div>
+      <section id="app-content" class="app-content"></section>
+    </main>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
